@@ -1,0 +1,53 @@
+{
+  "name": "trocacerta-frontend",
+  "version": "1.0.0",
+  "description": "TrocaCerta - Sistema inteligente para gestão de manutenção veicular - Frontend",
+  "main": "public/index.html",
+  "scripts": {
+    "dev": "live-server public --port=3000 --open=/",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o public/assets/css/style.min.css src/assets/css/style.css",
+    "minify-js": "uglifyjs src/assets/js/app.js -o public/assets/js/app.min.js -c -m",
+    "serve": "http-server public -p 3000 -o",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod --dir=public",
+    "lint": "eslint src/assets/js/**/*.js",
+    "format": "prettier --write src/**/*.{js,css,html}"
+  },
+  "keywords": [
+    "saas",
+    "automotive",
+    "maintenance",
+    "vehicle",
+    "notifications",
+    "frontend"
+  ],
+  "author": "TrocaCerta Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1",
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "vercel": "^32.4.1",
+    "netlify-cli": "^17.0.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.3.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/trocacerta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/trocacerta/issues"
+  },
+  "homepage": "https://trocacerta.com"
+}

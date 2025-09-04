@@ -1,0 +1,55 @@
+{
+  "name": "trocacerta-microsaas",
+  "version": "1.0.0",
+  "description": "TrocaCerta - MicroSaaS completo para gestão inteligente de manutenção veicular",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd frontend && npm run serve",
+    "start:backend": "cd backend && npm start",
+    "deploy": "npm run deploy:frontend && npm run deploy:backend",
+    "deploy:frontend": "cd frontend && npm run deploy:vercel",
+    "deploy:backend": "cd backend && npm run deploy",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "echo \"Frontend tests not configured\"",
+    "test:backend": "cd backend && npm test",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && npm run lint",
+    "clean": "rm -rf node_modules frontend/node_modules backend/node_modules",
+    "setup": "npm run install:all && npm run migrate && npm run seed"
+  },
+  "keywords": [
+    "microsaas",
+    "automotive",
+    "maintenance",
+    "saas",
+    "fullstack"
+  ],
+  "author": "TrocaCerta Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/trocacerta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/trocacerta/issues"
+  },
+  "homepage": "https://trocacerta.com"
+}
