@@ -12,13 +12,11 @@
     "seed": "knex seed:run",
     "migrate:rollback": "knex migrate:rollback",
     "lint": "eslint src/**/*.js",
-    "format": "prettier --write src/**/*.js",
-    "docker:build": "docker build -t trocacerta-backend .",
-    "docker:run": "docker run -p 3001:3001 trocacerta-backend"
+    "format": "prettier --write src/**/*.js"
   },
   "keywords": [
     "saas",
-    "automotive", 
+    "automotive",
     "maintenance",
     "api",
     "nodejs",
@@ -52,11 +50,10 @@
     "prettier": "^3.0.3"
   },
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "node": "18.x"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/trocacerta.git"
+    "url": "git+https://github.com/LuizCovelo/TrocaCerta.git"
   }
 }
